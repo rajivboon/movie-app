@@ -15,14 +15,27 @@ class MovieList extends React.Component {
     }
 
     increment = () => {
-        alert('incrementing Number')
+        // const count = this.state.count
+        const {count} = this.state
+        // debugger
+        // VERY BAD 
+        // this.state.count = count + 1 
+
+        this.setState({
+            count: count +1
+        })
     }
 
     decrement = () => {
         
-        alert('Dcrementing Number')
+        const {count} = this.state
+
+        this.setState({
+            count: count - 1
+        })
     }
     render() {
+        // debugger
         return (
             // <div>
             // <>
