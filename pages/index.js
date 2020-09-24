@@ -39,7 +39,11 @@ const Home = () => {
             
         <div className="row">
           <div className="col-lg-3">
-          <SideMenu whatEver={count} />
+          <SideMenu 
+            appName={"Movie DB"}
+            clickHandler={() => {console.log("Hello world") } } 
+            whatEver={count}
+          />
           </div>
           <div className="col-lg-9">
             <Carousel />
