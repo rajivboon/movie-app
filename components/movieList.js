@@ -12,15 +12,12 @@ class MovieList extends React.Component {
         this.state = {
             count:0
         }
+
+        this.increment = this.increment.bind(this)
     }
 
-    increment = () => {
-        // const count = this.state.count
+    increment()  {       
         const {count} = this.state
-        // debugger
-        // VERY BAD 
-        // this.state.count = count + 1 
-
         this.setState({
             count: count +1
         })
