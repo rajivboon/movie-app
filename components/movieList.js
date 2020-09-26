@@ -2,15 +2,12 @@ import React from 'react'
 
 class MovieList extends React.Component {
 
-    render() {
-        const {whatEver} = this.props
-      
-        return (           
-            <React.Fragment>  
-                { whatEver.map((movie) => {
-                    return (
-                        <div className="col-lg-4 col-md-6 mb-4">
-                    <div className="card h-100">
+    renderMovies() {
+        const {whatEver} =this.props     
+        return whatEver.map(movie =>
+            (
+            <div className="col-lg-4 col-md-6 mb-4">
+                <div className="card h-100">
                     <a href="#"><img className="card-img-top" src={movie.image} alt="" /></a>
                     <div className="card-body">
                         <h4 className="card-title">
@@ -22,15 +19,18 @@ class MovieList extends React.Component {
                     <div className="card-footer">
                         <small className="text-muted">{movie.rating} </small>
                     </div>
-                    </div>
-                </div>   
+                </div>
+            </div> 
+            )
+        )
+    }
 
-                    )
-                })}          
-                         
-                
-            </React.Fragment>
-         
+    render() {      
+      
+        return (           
+            <React.Fragment>  
+                { this.renderMovies () }               
+            </React.Fragment>         
         )
     }
 }
