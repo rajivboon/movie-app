@@ -4,7 +4,7 @@ class MovieList extends React.Component {
 
     renderMovies() {
         const {whatEver} =this.props     
-        return whatEver.map(movie =>
+        const movieElements = whatEver.map(movie =>
             (
             <div className="col-lg-4 col-md-6 mb-4">
                 <div className="card h-100">
@@ -23,10 +23,10 @@ class MovieList extends React.Component {
             </div> 
             )
         )
+        return movieElements
     }
 
-    render() {      
-      
+    render() {       
         return (           
             <React.Fragment>  
                 { this.renderMovies () }               
@@ -34,5 +34,4 @@ class MovieList extends React.Component {
         )
     }
 }
-
 export default MovieList
