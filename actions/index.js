@@ -29,6 +29,10 @@ const MOVIE_DATA = [
   ]
 
   export const getMovies = () => {
-    //   Create async functionality
-    return MOVIE_DATA
+    debugger
+    setTimeout(() => {
+      debugger
+      return MOVIE_DATA
+    }, 2000)
+    
   }

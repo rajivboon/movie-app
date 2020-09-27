@@ -9,8 +9,9 @@ import { getMovies } from '../actions'
 
 
 const Home = () => {
-  
-  const movies = getMovies()
+  debugger
+  const movies = getMovies() || []
+  debugger
   return (  
   <div>
     <Head>
