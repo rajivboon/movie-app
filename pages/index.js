@@ -8,10 +8,11 @@ import Footer from '../components/footer'
 import { getMovies } from '../actions'
 
 
-const Home = () => {
-  debugger
-  const movies = getMovies() || []
-  debugger
+const Home = () => {  
+  const [movies, setMovies] = useState([])
+  getMovies().then((movies) => {
+    setMovies(movies)
+  }) 
   return (  
   <div>
     <Head>
