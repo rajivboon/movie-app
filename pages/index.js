@@ -13,9 +13,15 @@ const Home = () => {
   const [count, setCount] = useState(0)
 
   useEffect(() => {
-    getMovies().then((movies) => {
-      setMovies(movies)
-    }) 
+    const fetchData = async() => {
+      const resMovies = await getMovies()
+      setMovies(resMovies)
+    }
+
+    fetchData();
+    // getMovies().then((movies) => {
+    //   setMovies(movies)
+    // }) 
   }, [count])
 
   
